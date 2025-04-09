@@ -6,14 +6,14 @@ const View = () => {
         viewdata();
     },[])
     const viewdata = async ()=>{
-        const res=await axios.get('http://localhost:9000/users');
+        const res=await axios.get('https://fsdproject-1.onrender.com/users');
         console.log(res);
         setUsers(res.data);
     }
   return (
     <div>
         <h1>Registerd Users List</h1>
-        <table style={{border: '2px solid red',backgroundColor: 'greenyellow',width: '100%'}}>
+        <table>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
